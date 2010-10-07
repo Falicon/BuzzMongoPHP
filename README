@@ -1,0 +1,41 @@
+######################################
+ABOUT THE CODE:
+######################################
+
+A simple Buzz Storage Class using MongoDB as the data store.
+
+This code is a custom storage class intended for use with the Google Buzz PHP client library ( http://code.google.com/p/buzz-php-client/ )
+
+######################################
+INSTALLATION STEPS:
+######################################
+
+1. Download and install the Buzz PHP Client from http://code.google.com/p/buzz-php-client/
+
+2. Add buzzMongoStorage.php to the storage folder created by buzz-php-client. (Make sure to update the YOUR_MONGO_INSTANCE_NAME and YOUR_MONGO_COLLECTION_NAME values to your specific values)
+
+3. Add require_once "buzzMongoStorage.php"; to the buzzStorage.php file
+
+4. Reference buzzMongoStorage in your application code when defining a storage system. For example
+
+$storage = new buzzMongoStorage();
+$auth = buzzOAuth::performOAuthLogin($storage, 'YOUR_USER_IDENTIFIER');
+
+
+######################################
+REQUIREMENTS:
+######################################
+
+1. An instance of MongoDB
+
+2. PHP with Mongo drivers installed ( http://php.net/manual/en/book.mongo.php )
+
+3. The Google Buzz PHP client code ( http://code.google.com/p/buzz-php-client/ )
+
+######################################
+QUESTIONS/COMMENTS/DISCLOSURES
+######################################
+
+This code was written by Kevin Marshall for use with the http://knowabout.it project.  It may not be complete, stable, or even all that good (but it works for the project's current needs).
+
+As long as you are comfortable with it, feel free to do whatever you want with this code.  Also, if you have any questions or comments on this stuff, feel free to email Kevin Marshall at info@falicon.com any time.
